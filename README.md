@@ -3,13 +3,13 @@ Issue [5428](https://github.com/ant-design/ant-design/issues/5428) of `ant desig
 
 ## Install and execute the tests
 ```
-$ git clone ...
+$ git clone https://github.com/aaronplanell/ant-design-issue_5428
 $ cd ant-design-issue_5428
-$ nmp install
+$ npm install
 $ npm test
 ```
 
-## Create this project from zero:
+## Or create this project from zero:
 
 1. Create the project with `create-react-app`:
   ```
@@ -129,12 +129,13 @@ $ npm test
   ```
   $ yarn test
   ```
- It will return an error message:
- ```
- matchMedia not present, legacy browsers require a polyfill
- ```
 
-10. For solving this issue, create the file `src\setupTests.js` and Copy&Paste this code:
+  It will return an error message:
+  ```
+  matchMedia not present, legacy browsers require a polyfill
+  ```
+
+10. For solving this issue, create the file `src\setupTests.js` and copy&paste this code:
   ```
   window.matchMedia = window.matchMedia || function() {
       return {
